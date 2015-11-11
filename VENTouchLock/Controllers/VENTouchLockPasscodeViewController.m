@@ -39,6 +39,11 @@ static const NSInteger VENTouchLockViewControllerPasscodeLength = 4;
     [self configureInvisiblePasscodeField];
     [self configureNavigationItems];
     [self configurePasscodeView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -127,6 +132,11 @@ static const NSInteger VENTouchLockViewControllerPasscodeLength = 4;
     }
 }
 
+- (void)applicationWillEnterForeground:(NSNotification*)notice{
+    if (!self.invisiblePasscodeField.isFirstResponder) {
+        [self.invisiblePasscodeField becomeFirstResponder];
+    }
+}
 
 #pragma mark - UITextField Methods
 
