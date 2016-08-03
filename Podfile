@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '6.0'
 
-pod 'SSKeychain', '~> 1.2.2'
+pod 'SAMKeychain', :git => 'https://github.com/soffes/SAMKeychain.git' #modern version of SSKeychain
 
 target 'VENTouchLockTests' do
   pod 'Specta', '~> 0.2.1'

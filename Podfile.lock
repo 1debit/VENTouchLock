@@ -1,19 +1,28 @@
 PODS:
   - Expecta (0.3.1)
   - OCMock (2.2.4)
+  - SAMKeychain (1.5.0)
   - Specta (0.2.1)
-  - SSKeychain (1.2.2)
 
 DEPENDENCIES:
   - Expecta (~> 0.2)
   - OCMock (~> 2.2.2)
+  - SAMKeychain (from `https://github.com/soffes/SAMKeychain.git`)
   - Specta (~> 0.2.1)
-  - SSKeychain (~> 1.2.2)
+
+EXTERNAL SOURCES:
+  SAMKeychain:
+    :git: https://github.com/soffes/SAMKeychain.git
+
+CHECKOUT OPTIONS:
+  SAMKeychain:
+    :commit: 80714c22e0f43de0be2134f99c0a0841f9ef066c
+    :git: https://github.com/soffes/SAMKeychain.git
 
 SPEC CHECKSUMS:
   Expecta: a354d4633409dd9fe8c4f5ff5130426adbe31628
   OCMock: a6a7dc0e3997fb9f35d99f72528698ebf60d64f2
+  SAMKeychain: 1fc9ae02f576365395758b12888c84704eebc423
   Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
-  SSKeychain: 88767e903ee8d274ed380e364d96b7a101235286
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
